@@ -39,7 +39,7 @@ TOPICS
 
     * images in signatures, support HTML sigs with link to img
 
-    * override subject tag parsing
+    * X override subject tag parsing
 
     * show more headers based on subject in transaction listing
 

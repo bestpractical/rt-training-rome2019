@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package RT::Training::Rome2019;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -59,7 +59,7 @@ Add this line:
 
 * images in signatures, support HTML sigs with link to img
 
-* override subject tag parsing
+* X override subject tag parsing
 
 * show more headers based on subject in transaction listing
 
