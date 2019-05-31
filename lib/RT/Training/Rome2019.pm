@@ -45,6 +45,57 @@ Add this line:
 
 =back
 
+=head1 TOPICS
+
+* X custom fields via email
+
+* X REST API
+
+* external custom fields
+
+* X send all transactions in template
+
+* suppress some emails, create custom condition based on custom role
+
+* images in signatures, support HTML sigs with link to img
+
+* override subject tag parsing
+
+* show more headers based on subject in transaction listing
+
+* script to find users with no tickets
+
+* new ticket from cc
+
+* pull CF value from another ticket
+
+* modify CF based on subject
+
+=head1 MAYBE
+
+* custom values for DNS
+
+* RTIR remove lookup or move to end of line
+
+* show custom fields by default in query builder
+
+=head1 EXTRA
+
+* custom fields grouping error
+
+* unmerge
+
+* docker / automation
+
+=head1 Sending multiple transactions in a reply
+
+    {my $transactions = $Ticket->Transactions;
+    while( my $transaction = $transactions->Next ){
+        next unless $transaction->Type eq 'Create' or $transaction->Type eq 'Comment';
+        $OUT .= $transaction->Content(Type => "text/html");
+    }
+    }
+
 =head1 AUTHOR
 
 Best Practical Solutions, LLC E<lt>modules@bestpractical.comE<gt>
