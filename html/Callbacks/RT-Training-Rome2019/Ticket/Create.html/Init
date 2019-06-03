@@ -1,0 +1,16 @@
+<%INIT>
+use Data::Printer;
+
+my $cf = RT::CustomField->new(RT->SystemUser);
+my ($ret, $msg) = $cf->LoadByName( Name => 'Global');
+
+RT::Logger->error("Unable to load Global CF: $msg") unless $ret;
+
+$ARGSRef->{GetCustomFieldInputName( CustomField => $cf )} = "Default value";
+
+warn "Got: " . p($ARGSRef);
+
+</%INIT>
+<%ARGS>
+$ARGSRef
+</%ARGS>
