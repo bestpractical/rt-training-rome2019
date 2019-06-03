@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package RT::Training::Rome2019;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
@@ -51,21 +51,26 @@ Add this line:
 
 * X REST API
 
-* external custom fields
+* X external custom fields
 
 * X send all transactions in template
 
-* suppress some emails, create custom condition based on custom role
+* X suppress some emails, create custom condition based on From address in email
 
 * images in signatures, support HTML sigs with link to img
 
 * X override subject tag parsing
 
+This code was moved from the subject tag parsing section to an email
+plugin because it turned out it also needed the queue passed in from
+rt-mailgate so it could know whether it was the To queue (Support)
+or the Cc queue (General). Both emails would look the same.
+
 * show more headers based on subject in transaction listing
 
-* script to find users with no tickets
+* X script to find users with no tickets
 
-* new ticket from cc
+* X new ticket from cc
 
 * pull CF value from another ticket
 
@@ -120,5 +125,6 @@ This is free software, licensed under:
   The GNU General Public License, Version 2, June 1991
 
 =cut
+
 
 1;
