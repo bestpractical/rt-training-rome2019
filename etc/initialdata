@@ -1,0 +1,6 @@
+@ScripConditions = (
+    { Name                 => 'On Not Law',                                # loc
+      Description          => 'When not Law Enforcement',                 # loc
+      ApplicableTransTypes => 'Correspond',
+      ExecModule           => 'OnCorrespondNotLaw', },
+);
